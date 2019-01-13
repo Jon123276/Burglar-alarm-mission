@@ -1,169 +1,336 @@
 
 mod = input("How many modules: ")
+
 mods = input("How many solved modules: ")
+
 bat = input("How many batteries: ")
+
 bath = input("How many battery holders: ")
+
 D = input("How many D batteries: ")
+
 AA = input("How many AA batteries: ")
+
 ind = input("How many indicators: ")
+
 lit = input("How many Lit indicators: ")
+
 unlit = input("How many Unlit Indicators: ")
+
 port = input("How many ports (must be less than 6): ")
+
 plate = input("How many port plates: ")
+
 ans1 = "no"
+
 ans2 = "yes"
+
 print "Cap if Lit"
+
 print "There should be ", lit, "Lit indicators and ", unlit, "Unlit indicators"
+
 ind1 = raw_input("Ind 1: ")
+
 ind2 = raw_input("Ind 2: ")
+
 ind3 = raw_input("Ind 3: ")
+
 ind4 = raw_input("Ind 4: ")
+
 ind5 = raw_input("Ind 5: ")
+
 port1 = raw_input("Port 1: ")
+
 port2 = raw_input("Port 2: ")
+
 port3 = raw_input("Port 3: ")
+
 port4 = raw_input("Port 4: ")
+
 port5 = raw_input("Port 5: ")
+
   
+
 print "\t1 1st SN = Letter"
+
 print "\t2 1st SN = Number"
+
 print "\t3 2nd SN = Letter"
+
 print "\t4 2nd SN = Number"
 
+
+
 num1 = input("Out of the 1st 2, choose Letter or Number: ")
+
 num2 = input("Out of the 2nd 2, choose Letter or Number: ")
+
+
 
 # Sn 1
 
+
+
 if(num1 == 1):
+
     sn1 = raw_input("Choose a Letter (A - Z): ")
+
     vow1 = raw_input("Is it a Vowel: ")
+
 elif(num1 == 2):
+
     sn1 = input("Choose a Number (0 - 9): ")
+
+
 
 # Sn 2
 
+
+
 if(num2 == 3):
+
     sn2 = raw_input("Choose a Letter (A - Z): ")
+
     vow2 = raw_input("Is it a Vowel: ")
+
 elif(num2 == 4):
+
     sn2 = input("Choose a Number (0 - 9): ")
+
     
+
 snd = input("1 for more digits in SN, 2 for more Letters in SN: ")
+
 bur = input("1 if BURG14R and 2 for nah: ")
+
 al = input("1 if AL53M and 2 for nah: ")
+
 for i in range(1, 6):
+
     # The burgler alarm numbers
+
     num1 = input("1st number: ")
+
     num2 = input("2nd number: ")
+
     num3 = input("3rd number: ")
+
     num4 = input("4th number: ")
+
     num5 = input("5th number: ")
+
     num6 = input("6th number: ")
+
     num7 = input("7th number: ")
+
     num8 = input("8th number: ")
+
     num = [num1, num2, num3, num4, num5, num6, num7, num8]
+
+
 
     # Number 1
 
+
+
     if (bat > port):
+
         if ((bath % 2) == 0):
+
             print num[0] + 9
+
         else:
+
             print num[0] + 1
+
     else:
+
         if ((num[7] % 2) == 0):
+
             print num[0] + 3
+
         else:   
+
             print num[0] + 4
 
-            # Number 2
 
-            if (port1 == "ps2" or port2 == "ps2" or port3 == "ps2" or port4 == "ps2" or port5 == "ps2"):
-                if (snd == 2):  
-                    print num[1] + 0
-                else:
-                    print num[1] + 6
+
+# Number 2
+
+
+
+    if (port1 == "ps2" or port2 == "ps2" or port3 == "ps2" or port4 == "ps2" or port5 == "ps2"):
+
+        if (snd == 2):  
+
+          print num[1] + 0
+
+        else:
+
+          print num[1] + 6
+
+    else:
+
+        if (ind1 == "BOB" or ind2 == "BOB" or ind3 == "BOB" or ind4 == "BOB" or ind5 == "BOB"):
+
+          print num[1] + 5
+
             else:
-                if (ind1 == "BOB" or ind2 == "BOB" or ind3 == "BOB" or ind4 == "BOB" or ind5 == "BOB"):
-                    print num[1] + 5
-                else:
-                    print num[1] + 2
 
-                    # Number 3
+              print num[1] + 2
 
-                    if ((mods % 2) == 0):
-                        if ((num[2] % 2) == 0):
-                            print num[2] + 8
-                        else:
-                            print num[2] + 4
-                    else:
-                        if (port1 == "rj" or port2 == "rj" or port3 == "rj" or port4 == "rj" or port5 == "rj"):
-                            print num[2] + 9
-                        else:
-                            print num[2] + 3
 
-                            # Number 4
 
-                            if (((num[0] + num[1] + num[2] + num[3] + num[4] + num[5] + num[6] + num[7])% 2) == 1):
-                                if (plate > ind):    
-                                    print num[3] + 7
-                                else:
-                                    print num[3] + 3
-                            else: 
-                                if (D > AA):
-                                    print num[3] + 7
-                                else:
-                                    print num[3] + 2
+# Number 3
+
+
+
+    if ((mods % 2) == 0):
+
+      if ((num[2] % 2) == 0):
+
+        print num[2] + 8
+
+      else:
+
+        print num[2] + 4
+
+    else:
+
+      if (port1 == "rj" or port2 == "rj" or port3 == "rj" or port4 == "rj" or port5 == "rj"):
+
+        print num[2] + 9
+
+      else:
+
+        print num[2] + 3
+
+
+
+# Number 4
+
+
+
+    if (((num[0] + num[1] + num[2] + num[3] + num[4] + num[5] + num[6] + num[7])% 2) == 1):
+
+      if (plate > ind):    
+
+        print num[3] + 7
+
+      else:
+
+        print num[3] + 3
+
+    else: 
+
+      if (D > AA):
+
+        print num[3] + 7
+
+      else:
+
+        print num[3] + 2
+
+
 
                                     # Number 5
 
-                                    if (mods > (bat * plate)):
-                                        if ((port % 2) == 0):
-                                            print num[4] + 9
-                                        else:
-                                            print num[4] + 3
-                                    else:
-                                        if (port > ind):
-                                            print num[4] + 7
-                                        else:
-                                            print num[4] + 8
 
-                                            # Number 6
 
-                                            if (port1 == "par" or port2 == "par" or port3 == "par" or port4 == "par" or port5 == "par"):
-                                                if (port1 == "ser" or port2 == "ser" or port3 == "ser" or port4 == "ser" or port5 == "ser"):
-                                                    print num[5] + 1
-                                                else:
-                                                    print num[5] + 5
-                                            else:
-                                                if (ind1 == "FRQ" or ind2 == "FRQ" or ind3 == "FRQ" or ind4 == "FRQ" or ind5 == "FRQ"):
-                                                    print num[5] + 0        
-                                                else:
-                                                    print num[5] + 4
+    if (mods > (bat * plate)):
+
+      if ((port % 2) == 0):
+
+        print num[4] + 9
+
+      else:
+
+        print num[4] + 3
+
+    else:
+
+      if (port > ind):
+
+        print num[4] + 7
+
+      else:
+
+        print num[4] + 8
+
+
+
+# Number 6
+
+
+
+    if (port1 == "par" or port2 == "par" or port3 == "par" or port4 == "par" or port5 == "par"):
+
+      if (port1 == "ser" or port2 == "ser" or port3 == "ser" or port4 == "ser" or port5 == "ser"):
+
+        print num[5] + 1
+
+      else:
+
+        print num[5] + 5
+
+    else:
+
+      if (ind1 == "FRQ" or ind2 == "FRQ" or ind3 == "FRQ" or ind4 == "FRQ" or ind5 == "FRQ"):
+
+        print num[5] + 0        
+
+      else:
+
+        print num[5] + 4
+
         
+
                                                     # Number 7
 
-                                                    if (bat > 4):
-                                                        if (unlit == 0):
-                                                            print num[6] + 2
-                                                        else:
-                                                            print num[6] + 6
-                                                    else:
-                                                        if (lit == 0):
-                                                            print num[6] + 4
-                                                        else:
-                                                            print num[6] + 9
+
+
+    if (bat > 4):
+
+      if (unlit == 0):
+
+        print num[6] + 2
+
+      else:
+
+        print num[6] + 6
+
+    else:
+
+      if (lit == 0):
+
+        print num[6] + 4
+
+      else:
+
+        print num[6] + 9
+
+
 
                                                             # Number 8
 
-                                                            if (bat == ind):
-                                                                if (bur == 1):
-                                                                    print num[7] + 1
-                                                                else: 
-                                                                    print num[7] + 0
-                                                            else:
-                                                                if (al == 1):
-                                                                    print num[7] + 0
-                                                                else:
-                                                                    print num[7] + 8
+
+
+    if (bat == ind):
+
+      if (bur == 1):
+
+        print num[7] + 1
+
+      else: 
+
+        print num[7] + 0
+
+    else:
+
+      if (al == 1):
+
+        print num[7] + 0
+
+      else:
+
+        print num[7] + 8
